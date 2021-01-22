@@ -280,12 +280,24 @@ def main():
             print(f'Strikes: {result[0]}, Balls: {result[1]}')
 
             if result[0] == 3:
-                user_input2 = input('You win, one more (Y/N)? ')
+                exit = False
+
+                while True:
+                    user_input2 = input('You win, one more (Y/N)? ')
+                    
+                    if is_yes(user_input2):
+                        random_number = str(get_not_duplicated_three_digit_number())
+                        print("Random Number is : ", random_number)
+
+                        break
+                    elif is_no(user_input2):
+                        exit = True
+
+                        break
+                    else:
+                        print('Wrong Input, Input again')
                 
-                if is_yes(user_input2):
-                    random_number = str(get_not_duplicated_three_digit_number())
-                    print("Random Number is : ", random_number)
-                else:
+                if exit:
                     break
 
     # ==================================
