@@ -273,7 +273,7 @@ def main():
 
         if user_input == '0':
             break
-        elif is_validated_number(user_input):
+        elif not is_validated_number(user_input):
             print('Wrong Input, Input again')
         else:
             result = get_strikes_or_ball(user_input, random_number)
