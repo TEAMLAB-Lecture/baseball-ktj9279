@@ -145,7 +145,7 @@ def get_not_duplicated_three_digit_number():
     while True:
         result = get_random_number()
 
-        if not is_duplicated_number(result):
+        if not is_duplicated_number(str(result)):
             break
     # ==================================
     return result
@@ -282,7 +282,7 @@ def main():
             if result[0] == 3:
                 if is_no(input('You win, one more (Y/N)? ')):
                     break
-                
+
     # ==================================
     print("Thank you for using this program")
     print("End of the Game")
