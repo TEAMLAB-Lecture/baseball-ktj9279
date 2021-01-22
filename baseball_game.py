@@ -276,7 +276,7 @@ def main():
         elif is_validated_number(user_input):
             print('Wrong Input, Input again')
         else:
-            result = get_strikes_or_ball(user_input)
+            result = get_strikes_or_ball(user_input, random_number)
             print(f'Strikes: {result[0]}, Balls: {result[1]}')
 
             if result[0] == 3:
